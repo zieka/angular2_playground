@@ -3,11 +3,7 @@ import {bootstrap} from "@angular/platform-browser-dynamic";
 
 @Component({
     selector: 'app',
-    template: '<input placeholder="Type hello World" (keyup)="hello(input.value)" #input>{{message}}',
-    directives: [],
-    providers: [],
-    styleUrls: [],
-    pipes: []
+    template: `<input placeholder="Type hello World" (keyup)="hello(input.value)" #input>{{message}}`
 })
 
 export class App {
@@ -17,3 +13,5 @@ export class App {
     this.message = value;
   }
 }
+
+bootstrap(App, []);
